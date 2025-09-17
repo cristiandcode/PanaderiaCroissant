@@ -12,6 +12,10 @@
   flex-grow: 1;
 }
 
+.imagenError{
+ width: 600px;
+ height: 600px;
+}
 .banner {
   object-fit: cover;
   height: 395px;
