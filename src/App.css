@@ -16,6 +16,17 @@
  width: 600px;
  height: 600px;
 }
+.buttonError{
+  margin-bottom: 50px;
+}
+.text-underline-warning {
+  text-decoration: underline;
+  text-decoration-color: #ffc107;
+  
+}
+.bgfooter{
+  background-color: #FFC107;
+}
 .banner {
   object-fit: cover;
   height: 395px;
@@ -49,4 +60,10 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .text-underline-warning {
+    text-decoration-thickness: 5px; /* más grueso en pantallas grandes */
+  }
 }
