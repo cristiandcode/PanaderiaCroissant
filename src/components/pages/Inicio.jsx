@@ -4,6 +4,7 @@ import CardProducto from "./producto/CardProducto";
 const Inicio = () => {
   return (
     <section className="mainSection">
+      
       <img
         className="banner"
         src="https://images.pexels.com/photos/28869109/pexels-photo-28869109.jpeg"
