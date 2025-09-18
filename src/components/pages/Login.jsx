@@ -14,7 +14,7 @@ const Login = () => {
 
   return (
     <Container className="my-5 mainSection">
-      <h1 className="mb-5">Ingresá al sitio</h1>
+      <h1 className="mb-5 text-underline-warning">Ingresá al sitio</h1>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo EMAIL */}
         <Form.Group className="mb-3" controlId="formBasicEmail">

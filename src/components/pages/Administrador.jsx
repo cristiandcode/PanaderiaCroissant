@@ -5,7 +5,7 @@ const Administrador = () => {
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Productos disponibles</h1>
+        <h1 className="display-4 text-underline-warning">Productos disponibles</h1>
         <Button variant="primary">
           <i className="bi bi-file-earmark-plus"></i>
         </Button>

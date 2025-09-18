@@ -10,7 +10,7 @@ const Inicio = () => {
         alt="fondo cafe"
       />
       <Container className="mt-5">
-        <h1 className="display-4">Nuestros Productos</h1>
+        <h1 className="display-4 text-underline-warning py-2">Nuestros Productos</h1>
         <hr />
     
           <Row>
