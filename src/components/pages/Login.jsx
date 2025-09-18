@@ -1,5 +1,7 @@
 import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { login } from "../helpers/queries";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {
@@ -9,7 +11,25 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (usuario) => {
-    console.log(usuario); // 👈 Ahora va a mostrar { email: "...", password: "..." }
+    console.log(usuario);
+    if(login(usuario)=== true){
+        //Aqui el usuario ya se logueo
+         Swal.fire({
+        title: "¡Ingresaste con exito!",
+        text: "Bienvenido al sitio de Croissant Panaderia",
+        icon: "success",
+        draggable: true
+});
+
+    }else{
+        //Credenciales incorrectas
+        Swal.fire({
+            title: "Error en el login",
+            text: "Usuario o contraseña erronea",
+            icon: "error",
+        
+});
+    } 
   };
 
   return (
