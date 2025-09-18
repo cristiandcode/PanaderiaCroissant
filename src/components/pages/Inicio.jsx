@@ -6,7 +6,7 @@ const Inicio = () => {
     <section className="mainSection">
       <img
         className="banner"
-        src="https://images.pexels.com/photos/13591748/pexels-photo-13591748.jpeg"
+        src="https://images.pexels.com/photos/28869109/pexels-photo-28869109.jpeg"
         alt="fondo cafe"
       />
       <Container className="mt-5">

@@ -16,6 +16,12 @@
  width: 600px;
  height: 600px;
 }
+.buttonError{
+  margin-bottom: 50px;
+}
+.bgfooter{
+  background-color: #FFC107;
+}
 .banner {
   object-fit: cover;
   height: 395px;
