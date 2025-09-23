@@ -2,8 +2,10 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { login } from "../helpers/queries";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom"; // ✅ IMPORTA useNavigate
 
-const Login = () => {
+const Login = ({ setUsuarioLogueado }) => {
+  const navigate = useNavigate(); // ✅ CREA navigate
   const {
     register,
     handleSubmit,
@@ -12,24 +14,30 @@ const Login = () => {
 
   const onSubmit = (usuario) => {
     console.log(usuario);
-    if(login(usuario)=== true){
-        //Aqui el usuario ya se logueo
-         Swal.fire({
+    if (login(usuario) === true) {
+      //Aqui el usuario ya se logueo
+      Swal.fire({
         title: "¡Ingresaste con exito!",
         text: "Bienvenido al sitio de Croissant Panaderia",
         icon: "success",
-        draggable: true
-});
+        draggable: true,
+      });
 
-    }else{
-        //Credenciales incorrectas
-        Swal.fire({
-            title: "Error en el login",
-            text: "Usuario o contraseña erronea",
-            icon: "error",
-        
-});
-    } 
+      // Guardar usuario en state y en sessionStorage (opcional)
+      sessionStorage.setItem("usuarioCroissant", JSON.stringify(usuario));
+      setUsuarioLogueado(usuario.email);
+
+      // ✅ REDIRECCIONAR AUTOMATICAMENTE
+      navigate("/administrador");
+      
+    } else {
+      //Credenciales incorrectas
+      Swal.fire({
+        title: "Error en el login",
+        text: "Usuario o contraseña erronea",
+        icon: "error",
+      });
+    }
   };
 
   return (
@@ -88,7 +96,6 @@ const Login = () => {
           />
         </Form.Group>
 
-        
         <Form.Group className="mb-3">
           <Form.Text className="text-danger">
             {errors.password?.message}
