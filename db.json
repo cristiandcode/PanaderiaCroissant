@@ -1,0 +1,13 @@
+{
+    "productos": [
+        {
+            "nombreProducto": "cafe",
+            "precio": 300,
+            "imagen": "",
+            "categoria": "Infusiones",
+            "descripcion_breve": "Cafe molido",
+            "descripcion_amplia": "Cafe molido 100% arábica, ideal para preparar en cafetera italiana o de goteo.",
+            "id": 1
+        }
+    ]
+}
