@@ -2,8 +2,26 @@ import { Button, Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
 import { Link } from "react-router-dom";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { listarProductos } from "../helpers/queries";
 
 const Administrador = () => {
+const [productos, setProductos] = useState([]);
+
+useEffect(() => {
+  obtenerProductos();
+}, []);
+
+  const obtenerProductos = async() =>{
+    const respuesta = await listarProductos()
+    if(respuesta.status === 200){
+      //guardamos los productos en el state
+      const datos = await respuesta.json();
+      setProductos(datos);
+    } else{
+      alert('Error al listar los productos')
+    }
+  }
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
@@ -37,6 +55,10 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
+          {
+            // producto={itemArray} es nuestro prop para itemProducto
+            productos.map((itemArray)=><ItemProducto key={itemArray.id} producto={itemArray}></ItemProducto>)
+          }
           <ItemProducto></ItemProducto>
           <ItemProducto></ItemProducto>
           <ItemProducto></ItemProducto>
