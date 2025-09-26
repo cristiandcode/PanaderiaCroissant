@@ -1,4 +1,5 @@
-import { Button } from "react-bootstrap";
+import { Button, Overlay } from "react-bootstrap";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 const ItemProducto = ({producto}) => {
   return (
     <tr>
@@ -14,12 +15,18 @@ const ItemProducto = ({producto}) => {
       </td>
       <td>{producto.categoria}</td>
       <td className="text-center">
+        <OverlayTrigger  placement="top"
+          overlay={<Tooltip id="tooltip-agregar">Editar producto</Tooltip>}>
         <Button variant="warning" className="me-lg-2">
           <i className="bi bi-pencil-square"></i>
         </Button>
+        </OverlayTrigger>
+        <OverlayTrigger placement="top"
+          overlay={<Tooltip id="tooltip-agregar">Borrar producto</Tooltip>}>
         <Button variant="danger">
           <i className="bi bi-trash"></i>
         </Button>
+        </OverlayTrigger>
       </td>
     </tr>
   );
