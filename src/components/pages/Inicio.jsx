@@ -1,7 +1,25 @@
 import { Container, Row } from "react-bootstrap";
 import CardProducto from "./producto/CardProducto";
+import { useEffect, useState } from "react";
+import { listarProductos } from "../helpers/queries";
 
 const Inicio = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    obtenerProductos();
+  }, []);
+
+  const obtenerProductos = async () => {
+    const respuesta = await listarProductos();
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setProductos(datos);
+    } else {
+      alert("Error al listar los productos");
+    }
+  };
+
   return (
     <section className="mainSection">
       <img
@@ -12,15 +30,11 @@ const Inicio = () => {
       <Container className="mt-5">
         <h1 className="display-4 text-underline-warning">Nuestros Productos</h1>
         <hr />
-    
-          <Row>
-            <CardProducto></CardProducto>
-            <CardProducto></CardProducto>
-            <CardProducto></CardProducto>
-            <CardProducto></CardProducto>
-            <CardProducto></CardProducto>
-          </Row>
-       
+        <Row>
+          {productos.map((producto) => (
+            <CardProducto key={producto.id} producto={producto} />
+          ))}
+        </Row>
       </Container>
     </section>
   );
