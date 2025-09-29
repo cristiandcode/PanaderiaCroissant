@@ -24,6 +24,13 @@
   text-decoration-color: #ffc107;
   
 }
+.img-tabla-producto {
+  width: 200px;       /* antes 80px */
+  height: 200px;      /* antes 80px */
+  object-fit: cover;  /* mantiene proporciones y recorta si sobra */
+  display: block;
+  margin: 0 auto;
+}
 .bgfooter{
   background-color: #FFC107;
 }

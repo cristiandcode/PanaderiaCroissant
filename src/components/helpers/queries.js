@@ -53,3 +53,30 @@ export const crearProducto = async (productoNuevo) => {
     console.error(error);
   }
 };
+//DELETE
+export const eliminarProductoAPI = async (id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/"+id,{
+        method: "DELETE"
+    });
+    return respuesta
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+//PUT, PATCH
+export const editarProducto = async (productoActualizado, id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/"+id,{
+        method: "PUT",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(productoActualizado)
+    });
+    return respuesta
+  } catch (error) {
+    console.error(error);
+  }
+};
