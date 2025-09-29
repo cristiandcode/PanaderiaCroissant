@@ -62,6 +62,12 @@
     height: 400px;
     object-fit: cover;
   }
+ .detalle-img {
+  width: 100%;       /* ocupa todo el ancho del contenedor */
+  height: 400px;     /* altura fija para todas las imágenes */
+  object-fit: cover; /* recorta y centra la imagen manteniendo la proporción */
+  border-radius: 8px; /* opcional, para que se vea más bonito */
+}
   
 .img-thumbnail{
     width: 200px;

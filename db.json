@@ -1,7 +1,7 @@
 {
   "productos": [
     {
-      "nombreProducto": "medialuna",
+      "nombreProducto": "Medialuna",
       "precio": "700",
       "imagen": "https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg",
       "categoria": "Dulce",
@@ -10,7 +10,7 @@
       "id": "21d4"
     },
     {
-      "nombreProducto": "café",
+      "nombreProducto": "Café",
       "precio": "1500",
       "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
       "categoria": "Infusiones",
@@ -19,7 +19,7 @@
       "id": "c4ac"
     },
     {
-      "nombreProducto": "te verde",
+      "nombreProducto": "Te verde",
       "precio": "1000",
       "imagen": "https://img.freepik.com/foto-gratis/placa-madera-hoja-objeto-alimentacion-saludable_1172-451.jpg",
       "categoria": "Infusiones",
