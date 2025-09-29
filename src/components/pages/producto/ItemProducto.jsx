@@ -43,9 +43,9 @@ const ItemProducto = ({producto, setProductos}) => {
   }
   return (
     <tr>
-      <td className="text-center">{producto.id}</td>
-      <td>{producto.nombreProducto}</td>
-      <td className="text-end">{producto.precio}</td>
+      <td className="text-center d-none">{producto.id}</td>
+      <td className="text-center">{producto.nombreProducto}</td>
+      <td className="text-center">{producto.precio}</td>
       <td className="text-center img-tabla-producto">
         <img
           src={producto.imagen}
@@ -53,7 +53,7 @@ const ItemProducto = ({producto, setProductos}) => {
           alt={producto.nombreProducto}
         ></img>
       </td>
-      <td>{producto.categoria}</td>
+      <td className="text-center">{producto.categoria}</td>
       <td className="text-center ">
         <OverlayTrigger  placement="top"
           overlay={<Tooltip id="tooltip-agregar">Editar producto</Tooltip>}>
