@@ -2,6 +2,7 @@ import { Button, Overlay } from "react-bootstrap";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { eliminarProductoAPI, listarProductos } from "../../helpers/queries.js";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 const ItemProducto = ({producto, setProductos}) => {
   const borrarProducto = () =>{
     Swal.fire({
@@ -56,9 +57,9 @@ const ItemProducto = ({producto, setProductos}) => {
       <td className="text-center ">
         <OverlayTrigger  placement="top"
           overlay={<Tooltip id="tooltip-agregar">Editar producto</Tooltip>}>
-        <Button variant="warning" className="me-lg-2">
+        <Link variant="warning" className="me-lg-2 btn btn-warning" to={"/administrador/editar/"+producto.id}>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         </OverlayTrigger>
         <OverlayTrigger placement="top"
           overlay={<Tooltip id="tooltip-agregar">Borrar producto</Tooltip>}>
