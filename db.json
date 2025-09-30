@@ -35,15 +35,6 @@
       "categoria": "Dulce",
       "descripcion_breve": "Mini Torta Chocolate y Nuez",
       "descripcion_amplia": "Brownie, helado de chocolate c/nuez , pionono, dulce de leche repostero y ganache de chocolate"
-    },
-    {
-      "nombreProducto": "Tostado mixto",
-      "precio": "3200",
-      "imagen": "https://images.pexels.com/photos/5586268/pexels-photo-5586268.jpeg",
-      "categoria": "Sandwich",
-      "descripcion_breve": "tostado de jamon y queso",
-      "descripcion_amplia": "tostado de jamon y queso rico ss",
-      "id": "3680"
     }
   ]
 }

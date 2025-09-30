@@ -1,5 +1,5 @@
-import { Container, Card, Row, Col } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { obtenerProducto } from "../helpers/queries";
 
@@ -48,6 +48,13 @@ const DetalleProducto = () => {
           </Col>
         </Row>
       </Card>
+
+      
+      <div className="text-center mt-4">
+        <Link to="/">
+          <Button variant="warning mt-3">Volver al inicio</Button>
+        </Link>
+      </div>
     </Container>
   );
 };
