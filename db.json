@@ -35,6 +35,15 @@
       "categoria": "Dulce",
       "descripcion_breve": "Mini Torta Chocolate y Nuez",
       "descripcion_amplia": "Brownie, helado de chocolate c/nuez , pionono, dulce de leche repostero y ganache de chocolate"
+    },
+    {
+      "id": "44b4",
+      "nombreProducto": "Alfajores de chocolate blanco",
+      "precio": "2500",
+      "imagen": "https://cdn.pixabay.com/photo/2020/03/01/22/26/alfajor-4894324_1280.jpg",
+      "categoria": "Dulce",
+      "descripcion_breve": "dsoampdmasopd",
+      "descripcion_amplia": "podmasodmsaodmsadmsamsaomdopsamdpoasmdopdasd"
     }
   ]
 }
