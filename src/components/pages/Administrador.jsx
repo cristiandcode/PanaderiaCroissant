@@ -1,14 +1,28 @@
 import { Button, Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
+import { Link } from "react-router-dom";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const Administrador = () => {
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Productos disponibles</h1>
-        <Button variant="primary">
-          <i className="bi bi-file-earmark-plus"></i>
-        </Button>
+        <h1 className="display-4 text-underline-warning">
+          Productos disponibles
+        </h1>
+
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip id="tooltip-agregar">Agregar producto</Tooltip>}
+        >
+          <Link
+            variant="primary"
+            to={"/administrar/crear"}
+            className="btn btn-success"
+          >
+            <i className="bi bi-file-earmark-plus"></i>
+          </Link>
+        </OverlayTrigger>
       </div>
       <hr />
       <Table responsive striped bordered hover>
