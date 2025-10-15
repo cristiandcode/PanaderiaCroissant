@@ -2,7 +2,7 @@
   "productos": [
     {
       "nombreProducto": "Medialuna",
-      "precio": "700",
+      "precio": "900",
       "imagen": "https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg",
       "categoria": "Dulce",
       "descripcion_breve": "Medialuna con masa de hojaldre",
