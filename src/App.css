@@ -16,6 +16,24 @@
  width: 600px;
  height: 600px;
 }
+.buttonError{
+  margin-bottom: 50px;
+}
+.text-underline-warning {
+  text-decoration: underline;
+  text-decoration-color: #ffc107;
+  
+}
+.img-tabla-producto {
+  width: 200px;       /* antes 80px */
+  height: 200px;      /* antes 80px */
+  object-fit: cover;  /* mantiene proporciones y recorta si sobra */
+  display: block;
+  margin: 0 auto;
+}
+.bgfooter{
+  background-color: #FFC107;
+}
 .banner {
   object-fit: cover;
   height: 395px;
@@ -44,9 +62,21 @@
     height: 400px;
     object-fit: cover;
   }
+ .detalle-img {
+  width: 100%;       /* ocupa todo el ancho del contenedor */
+  height: 400px;     /* altura fija para todas las imágenes */
+  object-fit: cover; /* recorta y centra la imagen manteniendo la proporción */
+  border-radius: 8px; /* opcional, para que se vea más bonito */
+}
   
 .img-thumbnail{
     width: 200px;
     height: 200px;
     object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .text-underline-warning {
+    text-decoration-thickness: 5px; /* más grueso en pantallas grandes */
+  }
 }
