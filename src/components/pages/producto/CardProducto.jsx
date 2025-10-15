@@ -5,7 +5,7 @@ const CardProducto = ({ producto }) => {
   const navigate = useNavigate();
 
   const irADetalle = () => {
-    navigate(`/detalle/${producto.id}`);
+    navigate(`/detalle/${producto._id}`);
   };
 
   return (
@@ -22,7 +22,7 @@ const CardProducto = ({ producto }) => {
           <Card.Title className="primary-font">{producto.nombreProducto}</Card.Title>
           <Card.Text>
             Descripción: {producto.descripcion_breve} <br className="mb-2" />
-            <span className="fw-bold">Precio: {producto.precio}</span>
+            <span className="fw-bold">Precio: ${producto.precio}</span>
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-end">
